@@ -19,7 +19,6 @@ The app serves the following functionalities:
 ## Tech Stack
 
 - **Android (Java/Kotlin):** Primary programming languages for Android app development.
-- **Firebase:** Backend for user authentication and real-time database for room schedules.
 - **Touch-screen Optimization:** User interface optimized for touch-screen devices.
 
 ## Getting Started
@@ -33,11 +32,9 @@ The app serves the following functionalities:
 
 1. Clone the repository
 
-3. Open the project in Android Studio.
+2. Open the project in Android Studio.
 
-4. Set up Firebase for authentication and database (details in `docs/firebase_setup.md` or similar).
-
-5. Build and run the application on an Android emulator or physical touch-screen device.
+53. Build and run the application on an Android emulator or physical touch-screen device.
 
 ## Usage
 
