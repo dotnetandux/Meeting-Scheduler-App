@@ -32,12 +32,12 @@ The app serves the following functionalities:
 ### Installation
 
 1. Clone the repository
-2. 
-2. Open the project in Android Studio.
 
-3. Set up Firebase for authentication and database (details in `docs/firebase_setup.md` or similar).
+3. Open the project in Android Studio.
 
-4. Build and run the application on an Android emulator or physical touch-screen device.
+4. Set up Firebase for authentication and database (details in `docs/firebase_setup.md` or similar).
+
+5. Build and run the application on an Android emulator or physical touch-screen device.
 
 ## Usage
 
