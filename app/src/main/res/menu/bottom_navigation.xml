@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ic_add"
+        android:icon="@drawable/ic_add_box"
+        android:title=""
+        app:showAsAction="always"
+        android:checked="false">
+
+    </item>
+
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@drawable/ic_home"
+        android:title=""
+        app:showAsAction="always"
+        android:checked="true">
+
+    </item>
+
+    <item
+        android:id="@+id/ic_menu"
+        android:icon="@drawable/ic_menu_black"
+        android:title=""
+        app:showAsAction="always"
+        android:checked="false">
+
+    </item>
+
+</menu>

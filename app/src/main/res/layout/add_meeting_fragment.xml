@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AddScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:paddingTop="10dp">
+
+    <Toolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sub_border_top"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/nameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="casual"
+            android:hint="@string/add_meeting_title_hint"
+            android:inputType="text"
+            android:textAlignment="viewStart"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+    </Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Toolbar
+                android:id="@+id/dateBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sub_border_top"
+                android:padding="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dateField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:padding="0dp"
+                        android:fontFamily="casual"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/timeField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:fontFamily="casual"
+                        android:textAlignment="textEnd"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </Toolbar>
+
+            <Toolbar
+                android:id="@+id/locBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sub_border_top"
+                android:padding="20dp">
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/place_autocomplete"
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"/>
+
+            </Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Toolbar
+                    android:id="@+id/peopleBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:background="@drawable/sub_border_top">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <AutoCompleteTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/personAuto"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="casual"
+                            android:textAlignment="viewStart"
+                            android:textSize="15sp"
+                            android:paddingRight="60dp"
+                            android:hint="@string/add_meeting_auto_hint"/>
+
+                    </LinearLayout>
+
+                </Toolbar>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="@string/add_meeting_add_p_button"
+                    android:id="@+id/addPerson"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/clearButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/button"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+
+            </LinearLayout>
+
+            <Toolbar
+                android:id="@+id/notesBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sub_border_top"
+                android:padding="30dp">
+
+                <EditText
+                    android:id="@+id/notesField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:fontFamily="casual"
+                    android:hint="@string/add_meeting_notes"
+                    android:textAlignment="viewStart"
+                    android:textSize="15sp"
+                    android:background="@android:color/transparent"/>
+
+            </Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="60dp"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/add_meeting_save_button"
+                    android:id="@+id/saveButton"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/clearButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/button"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <Button
+                    android:id="@+id/clearButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/add_meeting_clear"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/saveButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/button"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
